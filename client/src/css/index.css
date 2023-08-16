@@ -1,0 +1,25 @@
+#root {
+  background-color: black;
+  color: aliceblue;
+  min-height: 100vh;
+}
+
+.compose_div > h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.compose_div > div {
+  display: flex;
+  justify-content: space-evenly;
+}
+.compose_div img {
+  width: 40%;
+}
+.compose_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
