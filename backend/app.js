@@ -1,8 +1,8 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-
-import postModel from "./modals/createPost.js"; //don't forget .js , bcauz i forget every time.
+import newPost from "./routes/newPost.js"; //don't forget .js again
+import postModel from "./modals/createPost.js";
 
 const app = express();
 
@@ -13,20 +13,23 @@ app.use(bodyParser.json());
 
 app.use(cors({}));
 
-app.post("/newPost", async (req, res) => {
-  const newPost = req.body;
+app.get("/homepage", async (req, res) => {
+  const foundPosts = await postModel.find();
+  console.log("Found the data!");
+  res.send(foundPosts);
+});
+app.get("/blogDetail/:id", async (req, res) => {
+  const { id } = req.params;
   try {
-    const result = await postModel.create(newPost);
-    console.log(result);
-    // Send a response with the created post data
-    res.status(200).json(result);
-  } catch (error) {
-    console.error("Error creating post:", error);
-    res
-      .status(500)
-      .json({ error: "An error occurred while creating the post." });
+    const foundBlog = await postModel.findById(id);
+    console.log("Found the data by id and sending to client.");
+    res.send(foundBlog);
+  } catch (err) {
+    console.log(err);
   }
 });
+
+app.post("/newPost", newPost);
 
 app.listen(5000, () => {
   console.log("server is running on port 3000");
