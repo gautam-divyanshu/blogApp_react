@@ -1,25 +1,89 @@
+body {
+  background-color: black;
+  color: aliceblue;
+}
 #root {
   background-color: black;
   color: aliceblue;
   min-height: 100vh;
 }
+.Routes {
+  padding-top: 70px;
+}
+/* navbar */
+.navbar {
+  background-color: black;
+}
+.homeLink {
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+}
+.custom-btn {
+  background-color: #03a9f4;
+}
+.custom-btn:hover {
+  background-color: none;
+  border-color: #03a9f4;
+}
+/* navbar ends */
 
-.compose_div > h1 {
+/* homepage starts */
+.homePost {
+  margin-top: 3%;
+}
+.homeTitle {
+  font-weight: 900;
+  padding: 0px 15px; 
+}
+.homePost hr {
+  margin: 20px;
+}
+.custom-link-style{
+  text-decoration: none;
+  color: aliceblue;
+}
+/* homepage ends */
+
+
+/* blog details */
+.blogDetail{
   display: flex;
   justify-content: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
 }
-.compose_div > div {
+.blogDetail h3{
+  font-weight: 900;
+  padding: 25px 0px;
+}
+
+.blogDetailImg{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  padding-bottom: 25px;
 }
-.compose_div img {
-  width: 40%;
+/* blog details ends*/
+
+
+
+/* compose page starts */
+.compose_img {
+  border: 1px white solid;
+  padding-right: 10px;
 }
 .compose_form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 50%;
+  gap: 10px;
+  padding-left: 10px;
 }
+.compose_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap:25px;
+  height: 70vh;
+}
+/* compose page ends */
+

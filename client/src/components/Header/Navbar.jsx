@@ -7,12 +7,12 @@ const Navbar = () => {
   return (
     <div>
       <nav
-        className="navbar navbar-expand bg-dark border-bottom border-body"
+        className="navbar navbar-expand fixed-top border-bottom border-body navbarw"
         data-bs-theme="dark"
       >
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            Navbar
+            <img src="./symbols.png" alt="blog" style={{ width: "30px" }} />
           </Link>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
