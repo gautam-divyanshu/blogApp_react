@@ -27,11 +27,14 @@ const Home = () => {
   return (
     <div className="container homePost">
       <div>
-        {data.map((item, index) => (
-          <Link to={`/blog/${item._id}`} className="custom-link-style">
-            <div key={index} className="row g-0">
+        {data.map((item) => (
+          <Link
+            key={item._id}
+            to={`/blog/${item._id}`}
+            className="custom-link-style"
+          >
+            <div className="row g-0">
               {/* images */}
-
               <div className="col-md-3">
                 <img
                   src={item.imgLink}
@@ -53,7 +56,6 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-
               <hr />
             </div>
           </Link>

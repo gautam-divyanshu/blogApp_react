@@ -8,7 +8,7 @@ body {
   min-height: 100vh;
 }
 .Routes {
-  padding-top: 70px;
+  padding-top: 60px;
 }
 /* navbar */
 .navbar {
@@ -34,36 +34,33 @@ body {
 }
 .homeTitle {
   font-weight: 900;
-  padding: 0px 15px; 
+  padding: 0px 15px;
 }
 .homePost hr {
   margin: 20px;
 }
-.custom-link-style{
+.custom-link-style {
   text-decoration: none;
   color: aliceblue;
 }
 /* homepage ends */
 
-
 /* blog details */
-.blogDetail{
+.blogDetail {
   display: flex;
   justify-content: center;
 }
-.blogDetail h3{
+.blogDetail h3 {
   font-weight: 900;
   padding: 25px 0px;
 }
 
-.blogDetailImg{
+.blogDetailImg {
   display: flex;
   justify-content: center;
   padding-bottom: 25px;
 }
 /* blog details ends*/
-
-
 
 /* compose page starts */
 .compose_img {
@@ -82,8 +79,38 @@ body {
   align-items: center;
   justify-content: center;
   flex: 1;
-  gap:25px;
+  gap: 25px;
   height: 70vh;
 }
 /* compose page ends */
 
+/* login page */
+.login {
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginBody {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 30%;
+}
+.googleOath p {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+.custom-navlink {
+  border: 1px #03a9f4 solid;
+  color: white;
+}
+.custom-navlink:hover {
+  background-color: #03a9f4;
+}

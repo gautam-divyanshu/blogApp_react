@@ -20,7 +20,8 @@ const Navbar = () => {
 
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <NavItem navitem="Home" to="/" />
-              <NavItem navitem="Create Post" to="/compose" />
+              {true?<NavItem navitem="Login" to="/login" />:<NavItem navitem="Logout" to="/logout" />}
+              {true?<NavItem navitem="Create Post" to="/compose" />:""}
             </ul>
           </div>
         </div>
